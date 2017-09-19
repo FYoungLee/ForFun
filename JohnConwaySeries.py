@@ -1,4 +1,4 @@
-def JCSeries(howmany):
+def jc_series(howmany):
     if not isinstance(howmany, int):
         raise Exception('An integer required! ')
     result = '1'
@@ -24,5 +24,5 @@ def JCSeries(howmany):
 
 if __name__ == '__main__':
     hm = input('Input the size of John Conway Series that you want >> ')
-    for each in JCSeries(int(hm)):
+    for each in jc_series(int(hm)):
         print(each)
