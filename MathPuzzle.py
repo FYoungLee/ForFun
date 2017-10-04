@@ -1,12 +1,24 @@
-def puzzle_1():
-    '''
+"""
          好 是 好
     +    要 做 好
     ------------
       要 做 好 事
 
-      ?  ?  ?  ?
-    '''
+      要 = ?  做 = ?  好 = ?  事 = ?
+"""
+
+
+def method_1():
+    for x in range(100, 1000):
+        for y in range(100, 1000):
+            A, B, C = [c for c in str(x)]
+            D, E, F = [c for c in str(y)]
+            left, right = x + y, int(D + E + A + B)
+            if A == C == F and left == right:
+                print(D, E, A, B)
+
+
+def method_2():
     for x in range(100, 1000):
         for y in range(100, 1000):
             A = x // 100
@@ -19,3 +31,8 @@ def puzzle_1():
             right = D * 1000 + E * 100 + A * 10 + B
             if A == C == F and  left == right:
                 print(D, E, A, B)
+
+
+if __name__ == '__main__':
+    method_1()
+    method_2()
